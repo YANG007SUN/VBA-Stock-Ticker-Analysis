@@ -18,7 +18,6 @@ Sub Stock_analysis():
     Dim ticker_greatest_percent_decrease As String
     Dim ticker_greatest_volume As String
     Dim row_count As Long
-    Dim new_row_count As Long
     Dim greatest_percent_increase As Double
     Dim greatest_percent_decrease As Double
     Dim greatest_volume As Double
@@ -35,12 +34,7 @@ Sub Stock_analysis():
             Set ws = ThisWorkbook.Worksheets(i)
             row_count = ws.Cells(Rows.Count, 1).End(xlUp).Row 'last row of dataset in each worksheet
  
-
-            'find out unique value of tickers
-            ws.Range("A2:A" & row_count).Copy
-            ws.Range("I2").PasteSpecial
-            ws.Columns(9).RemoveDuplicates Columns:=Array(1)
-            
+            'Name the value
             ws.Range("I1") = "Ticker"
             ws.Range("J1") = "Yearly Change"
             ws.Range("K1") = "Percent Change"
@@ -53,10 +47,7 @@ Sub Stock_analysis():
             ws.Cells(4, 15) = "Greatest Volume"
             ws.Cells(1, 16) = "Ticker"
             ws.Cells(1, 17) = "Value"
-                    
-            'find out new row count after remove duplicated tickers name
-            new_row_count = ws.Cells(Rows.Count, 9).End(xlUp).Row
-            
+
             
             greatest_percent_increase = 0
             greatest_percent_decrease = 0
