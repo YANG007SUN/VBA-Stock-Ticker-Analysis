@@ -1,9 +1,10 @@
-# VBA-challenge
-VBA Stock Analysis
+# VBA Stock Analysis
 
- ## Instructions
+This project uses VBA script (_Stock Analysis Source Code.bas_) to analyze each stock in excel file in **Resources** folder.
+It will print out summary statistics after you run the program. 
 
- * Create a script that will loop through all the stocks for one year and output the following information.
+### **Functionality of this program**
+* The script will loop through all the stocks in each worksheet for one year and output the following information.
 
    * The ticker symbol.
 
@@ -13,22 +14,13 @@ VBA Stock Analysis
 
    * The total stock volume of the stock.
 
- * You should also have conditional formatting that will highlight positive change in green and negative change in red.
+   * The stock with the "Greatest % increase", "Greatest % decrease" and "Greatest total volume". 
 
- * The result should look as follows.
+ * The conditional formatting that will highlight positive change in green and negative change in red.
 
+### **Results**
+![2014_Stock_Analysis](Images/2014_Stock_Analysis.png)
 
- ### CHALLENGES
+![2015_Stock_Analysis](Images/2015_Stock_Analysis.png)
 
- 1. Your solution will also be able to return the stock with the "Greatest % increase", "Greatest % decrease" and "Greatest total volume". The solution will look as follows:
-
-
- 2. Make the appropriate adjustments to your VBA script that will allow it to run on every worksheet, i.e., every year, just by running the VBA script once.
-
- ### Other Considerations
-
- * Use the sheet `alphabetical_testing.xlsx` while developing your code. This data set is smaller and will allow you to test faster. Your code should run on this file in less than 3-5 minutes.
-
- * Make sure that the script acts the same on each sheet. The joy of VBA is to take the tediousness out of repetitive task and run over and over again with a click of the button.
-
-
+![2016_Stock_Analysis](Images/2016_Stock_Analysis.png)
